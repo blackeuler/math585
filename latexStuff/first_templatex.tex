@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,amsthm,fullpage}
+\usepackage{graphicx}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{problem}{Problem}
+
+%The above commands create numbered environments for theorems, lemmas, propositions, and problems.
+%Use as needed.
+
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\newtheorem*{example}{Example}
+
+%These commands (with asterisk) create un-numbered theorem-like environments.   Use as needed.
+
+
+\title{LaTeX under Review}
+\author{Christopher D Miller}
+\date{February 5 2019}
+
+% These lines produce reasonably formatted title information
+% for your assignment once \maketitle is invoked in the body of the document.
+% You can use the command \date{\today} to automatically generate the date the file is compiled.
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+\item Use the function \( \displaystyle{f_n(x) = \sum_{k=1}^{n-1} e^{x^k}} \) to test that $n=3$ is prime by computing 
+\( \dfrac{d^3 f}{dx^3}(0) \).
+
+To begin testing if 3 is a prime number we must first find the 3rd derivative of the following function.
+    \begin{align*}
+            f_3(x) &= \sum_{k=1}^{2}e^{x^k}\\
+            &= e^x + e^{x^2} 
+    \end{align*}
+So we must differentiate $f_3(x)$ 3 times.
+    \begin{align*}
+        &\dfrac{d f}{dx} = 2 x e^{x^2}+e^x\\
+        &\dfrac{d^2 f}{d^2x} =  2 e^{x^2}+4 x^2 e^{x^2}+e^x\\
+        &\dfrac{d^3 f}{d^3x} = 12 x e^{x^2} +8 x^3 e^{x^2} 
+        +e^x \\
+        &\dfrac{d^3 f}{dx^3}(0) = 1
+    \end{align*}
+
+
+\item Use this method to show that $n=4$ is not prime.
+
+To begin testing if 4 is a prime number we must first find the 4th derivative of the following function.
+\begin{align*}
+        f_4(x) &= \sum_{k=1}^{3}e^{x^k}\\
+        &= e^x + e^{x^2} + e^{x^3} 
+\end{align*}
+So we must differentiate $f_4(x)$ 4 times.
+\begin{align*}
+    &\dfrac{d f}{dx} = 2 x e^{x^2} +e^x \\
+    &\dfrac{d^2 f}{d^2x} =  2 e^{x^2}+4 x^2 e^{x^2}+e^x\\
+    &\dfrac{d^3 f}{d^3x} = 12 x e^{x^2} +8 x^3 e^{x^2} 
+    +e^x \\
+    &\dfrac{d^4 f}{d^4x} = 48 x^2 e^{x^2} +12 e^{x^2} +16 x^4 e^{x^2} +e^x  \\
+    &\dfrac{d^3 f}{dx^3}(0) = 12  + 1 =13
+\end{align*}
+Thus 4 is not prime since the 4th derivative of this function was not 1.
+
+\item Carefully state a theorem that the function $f_n(x)$ can be used to test whether $n$ is prime.   You do not need to include a proof.
+\begin{theorem}
+    For each positive integer $n > 1$, define the function $g_n$ by $g_n(x) = \sum_{k=1}^{n-1}e^{x^k}$ A positive integer n is prime if and only if $\dfrac{d^3 f}{dx^3}(0) =1$.
+\end{theorem}
+
+\end{enumerate}
+
+
+
+\end{document}
