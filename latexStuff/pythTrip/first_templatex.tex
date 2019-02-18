@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,amsthm,fullpage}
+\usepackage{graphicx}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{problem}{Problem}
+
+%The above commands create numbered environments for theorems, lemmas, propositions, and problems.
+%Use as needed.
+
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\newtheorem*{example}{Example}
+%These commands (with asterisk) create un-numbered theorem-like environments.   Use as needed.
+
+
+\title{Pythagorean Triples}
+\author{Christopher D Miller}
+\date{February 5 2019}
+
+% These lines produce reasonably formatted title information
+% for your assignment once \maketitle is invoked in the body of the document.
+% You can use the command \date{\today} to automatically generate the date the file is compiled.
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\maketitle
+\begin{proposition}
+    \begin{align*}
+        a_{k+1} &= a_{k} +4\\ 
+        b_{k+1} &= \frac{1}{2} a_{k} + b_{k} +1\\
+        c_{k+1} &= \frac{1}{2}a_k + c_k +1
+    \end{align*}
+    Generates Pythagorean Triples of Height 8 with $a_0=20,b_0 = 21,c_0 = 29$
+    
+\end{proposition}
+\begin{proof}     
+We will prove by induction that Proposition 1 holds for all $k \geq 0$.\\\textbf{Base Case:} Our base case is when k = 0.So when k =0 , by definition our formula gives us a Pythagorean Triple of height 8.So our proposition is true in this case.\\
+\textbf{Induction Step:} Let k $\geq$ 0 be given and suppose our proposition is true for $n=k$. Then  
+\end{proof}
+
+
+\end{document}
