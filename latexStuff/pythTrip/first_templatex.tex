@@ -42,7 +42,10 @@
 \end{proposition}
 \begin{proof}     
 We will prove by induction that Proposition 1 holds for all $k \geq 0$.\\\textbf{Base Case:} Our base case is when k = 0.So when k =0 , by definition our formula gives us a Pythagorean Triple of height 8.So our proposition is true in this case.\\
-\textbf{Induction Step:} Let k $\geq$ 0 be given and suppose our proposition is true for $n=k$. Then  
+\textbf{Induction Step:} Let k $\geq$ 0 be given and suppose our proposition is true for $n=k$. We need to show that proposition 1 holds for $a_{k+1}$. In other words we need to show that $$a_{k+1}^2+b_{k+1}^2 - c_{k+1}^2 = 0$$.So using our induction hypothesis. We can write it in the following form:
+$$\big( a_{k} +4\big)^2 + \big( \frac{1}{2} a_{k} + b_{k} +1 \big)^2 - \big( \frac{1}{2}a_k + c_k +1\big)^2 $$ 
+Applying some algebra we then simplify it further  to obtain : $$\big( \frac{1}{4} - \frac{1}{4} \big)=0$$
+Thus arriving at the thing we are trying to prove. 
 \end{proof}
 
 
