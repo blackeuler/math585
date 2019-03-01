@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb,amsmath,amsthm,fullpage}
+\usepackage{graphicx}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{problem}{Problem}
+
+%The above commands create numbered environments for theorems, lemmas, propositions, and problems.
+%Use as needed.
+
+
+\newtheorem*{remark}{Remark}
+\newtheorem*{solution}{Solution}
+\newtheorem*{example}{Example}
+
+%These commands (with asterisk) create un-numbered theorem-like environments.   Use as needed.
+
+
+\title{Tessellations}
+\author{Christopher D Miller}
+\date{February 5 2019}
+
+% These lines produce reasonably formatted title information
+% for your assignment once \maketitle is invoked in the body of the document.
+% You can use the command \date{\today} to automatically generate the date the file is compiled.
+
+\usepackage{hyperref}
+
+\begin{document}
+
+\maketitle
+
+
+
+\begin{theorem}
+    There are exactly three regular tessellations of the plane.
+\end{theorem}
+\begin{proof}
+    A regular tessallation is a being able to cover a plane with regular polygons without any gaps or overlaps. A regular polygon is a polygon with the same length and every angle is equal. To cover a plane without gaps then the shapes interior angle has to divide 360.The formula for the interior angle of a regular polygon is $$\frac{180(n-2)}{n} \text{where } n \text{ is the number of sides}.$$
+    So we need the interior angle of the regular polygon to divide 360. In other words there exist a $k$ such that $$\frac{180(n-2)}{n}k = 360 .$$. 
+    \begin{align*}
+        \frac{180(n-2)}{n}k& = 360\\
+        \frac{(n-2)}{n}k& = 2\\
+        (n-2)k& = 2n\\
+        kn-2k& = 2n\\
+        kn-2k + 4 &= 2n+4\\
+        (n-2)(k-2) &=4
+    \end{align*}
+    In order to solve this equation notice that $(n-2)\leq 4$ and $(k-2)\leq 4$. This gives us $3\leq n \leq 6$ and $3\leq n \leq 6$. The only solutions are $n = 3 ,k =6$ , $n=6,k=3$, $n=4,k=4$. So there must be only 3 regular polygons that can tesselate a plane. 
+\end{proof}
+
+
+
+
+
+\end{document}
